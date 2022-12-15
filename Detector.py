@@ -105,7 +105,7 @@ else:
 
 
 #Maximum and Minimum Card Areas
-if image is not None
+if image is not None:
     Min_Card_Area = 25000
     Max_Card_Area = 300000
     # Adaptive threshold levels

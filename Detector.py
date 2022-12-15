@@ -17,28 +17,28 @@ Data_Set = st.selectbox('Select Data Set:',('4Love','3Clubs','6Diamond','2Diamon
 st.write('Selected Data is:', Data_Set)
 
 if(Data_Set == "4Love"):
-  4Love = open("4Love.jpeg", "rb").read()
+  image = open("4Love.jpeg", "rb").read()
   st.image(4Love, caption='Input Card for detection')
   
   
   if(Data_Set == "3Clubs"):
-  4Love = open("4Love.jpeg", "rb").read()
+  image = open("4Love.jpeg", "rb").read()
   st.image(4Love, caption='Input Card for detection')
   
   
   if(Data_Set == "6Diamond"):
-  4Love = open("4Love.jpeg", "rb").read()
+  image = open("4Love.jpeg", "rb").read()
   st.image(4Love, caption='Input Card for detection')
   
   
   if(Data_Set == "2Diamond"):
-  4Love = open("4Love.jpeg", "rb").read()
+  image = open("4Love.jpeg", "rb").read()
   st.image(4Love, caption='Input Card for detection')
   
   
   
   if(Data_Set == "JLove"):
-  4Love = open("4Love.jpeg", "rb").read()
+  image = open("4Love.jpeg", "rb").read()
   st.image(4Love, caption='Input Card for detection')
   
   
@@ -84,13 +84,13 @@ Max_Rank_Diff = 3500
 
 
 #image = cv2.imread(r'D:\Sem 7\Image Processing\Project\OpenCV-Playing-Card-Detector\JSpades.jpeg')
-image = 4Love
+#image = 4Love
 
 
 #%% To load rank and suit images for compairing
 
 
-path = os.path.dirname(os.path.abspath(__file__))
+#path = os.path.dirname(os.path.abspath(__file__))
 
 
 
@@ -134,9 +134,11 @@ def load_suits(filepath):
 
 
 
-train_ranks = load_ranks( path + '/Card_Images/')
-train_suits = load_suits( path + '/Card_Images/')
+#train_ranks = load_ranks( path + '/Card_Images/')
+#train_suits = load_suits( path + '/Card_Images/')
 
+train_ranks = load_ranks('Card_Images/')
+train_suits = load_suits('Card_Images/')
 
 
 #%% Preprocessing Part
@@ -405,11 +407,14 @@ else:
                 
         
             # Return the identiy of the card and the quality of the suit and rank match
-            print(rank_match_name, suit_match_name, rank_match_diff, suit_match_diff)
+            #print(rank_match_name, suit_match_name, rank_match_diff, suit_match_diff)
             #print(rank_match_name, suit_match_name)
         
-         
-               
+ 
+st.write("##")
+st.subheader('Output Data')
+st.text(rank_match_name)   
+st.text(suit_match_name) 
                 
                 
                 

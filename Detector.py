@@ -90,9 +90,9 @@ if(Data_Set == "FourLove"):
 elif(Data_Set == "ThreeClubs"):
   image = cv2.imread(r'./Test_Images/3Clubs.jpeg')
 elif(Data_Set == "TwoDiamond"):
-  image = cv2.imread(r'./Test_Images/2Diamond.jpeg')
+  image = cv2.imread(r'./Test_Images/2Diamonds.jpeg')
 elif(Data_Set == "SixDiamond"):
-  image = cv2.imread(r'./Test_Images/6Diamond.jpeg')
+  image = cv2.imread(r'./Test_Images/6Diamonds.jpeg')
 elif(Data_Set == "JLove"):
   image = cv2.imread(r'./Test_Images/JLove.jpeg')
 

@@ -17,7 +17,7 @@ Data_Set = st.selectbox('Select Data Set:',('FourLove','ThreeClubs','SixDiamond'
 st.write('Selected Data is:', Data_Set)
 
 if(Data_Set == "FourLove"):
-  image = open("4Love.jpeg", "rb").read()
+  image = open("./Test_Images/4Love.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   

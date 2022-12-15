@@ -12,7 +12,12 @@ from io import StringIO
 
 #adding a file uploader
 
-kk = st.file_uploader("Please choose a file",['jpeg','png','jpg'],True)
+
+
+
+  
+  
+
 
 
 
@@ -20,37 +25,42 @@ kk = st.file_uploader("Please choose a file",['jpeg','png','jpg'],True)
 st.markdown("<h1 style='text-align: center; font-size: 40px;'>Playing Card Detector</h1>",unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; font-size: 20px;'>Team Members : Antony Jerald & Joel Joy</h1>", unsafe_allow_html=True)
 
-Data_Set = st.selectbox('Select Data Set:',('FourLove','ThreeClubs','SixDiamond','TwoDiamond','JLove'))
-st.write('Selected Data is:', Data_Set)
 
-if(Data_Set == "FourLove"):
-  image = open("./Test_Images/4Love.jpeg", "rb").read()
-  st.image(image, caption='Input Card for detection')
-  
-  
-if(Data_Set == "ThreeClubs"):
-  image = open("./Test_Images/3Clubs.jpeg", "rb").read()
-  st.image(image, caption='Input Card for detection')
-  
-  
-if(Data_Set == "SixDiamond"):
-  image = open("./Test_Images/6Diamonds.jpeg", "rb").read()
-  st.image(image, caption='Input Card for detection')
-  
-  
-if(Data_Set == "TwoDiamond"):
-  image = open("./Test_Images/2Diamonds.jpeg", "rb").read()
-  st.image(image, caption='Input Card for detection')
-  
-  
-  
-if(Data_Set == "JLove"):
-  image = open("./Test_Images/JLove.jpeg", "rb").read()
-  st.image(image, caption='Input Card for detection')
+input_image = st.radio("Choose if you want to work on already given dataset or use your own image",('Given Iamge', 'Your Image'))
 
 
+if input_image == 'Given Iamge':
+  Data_Set = st.selectbox('Select Data Set:',('FourLove','ThreeClubs','SixDiamond','TwoDiamond','JLove'))
+  st.write('Selected Data is:', Data_Set)
+
+  if(Data_Set == "FourLove"):
+    image = open("./Test_Images/4Love.jpeg", "rb").read()
+    st.image(image, caption='Input Card for detection')
 
 
+  if(Data_Set == "ThreeClubs"):
+    image = open("./Test_Images/3Clubs.jpeg", "rb").read()
+    st.image(image, caption='Input Card for detection')
+
+
+  if(Data_Set == "SixDiamond"):
+    image = open("./Test_Images/6Diamonds.jpeg", "rb").read()
+    st.image(image, caption='Input Card for detection')
+
+
+  if(Data_Set == "TwoDiamond"):
+    image = open("./Test_Images/2Diamonds.jpeg", "rb").read()
+    st.image(image, caption='Input Card for detection')
+
+
+  
+  if(Data_Set == "JLove"):
+    image = open("./Test_Images/JLove.jpeg", "rb").read()
+    st.image(image, caption='Input Card for detection')
+
+
+else:
+  image = st.file_uploader("Please choose a file",['jpeg','png','jpg'],True)
 
 
 #%%  Some initialisation

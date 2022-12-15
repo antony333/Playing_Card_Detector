@@ -36,28 +36,28 @@ if input_image == 'Given Iamge':
 
   if(Data_Set == "FourLove"):
     image = open("./Test_Images/4Love.jpeg", "rb").read()
-    st.image(image, caption='Input Card for detection')
+    st.image(image, caption='Selected Card for detection',width=200)
 
 
   if(Data_Set == "ThreeClubs"):
     image = open("./Test_Images/3Clubs.jpeg", "rb").read()
-    st.image(image, caption='Input Card for detection')
+    st.image(image, caption='Selected Card for detection')
 
 
   if(Data_Set == "SixDiamond"):
     image = open("./Test_Images/6Diamonds.jpeg", "rb").read()
-    st.image(image, caption='Input Card for detection')
+    st.image(image, caption='Selected Card for detection')
 
 
   if(Data_Set == "TwoDiamond"):
     image = open("./Test_Images/2Diamonds.jpeg", "rb").read()
-    st.image(image, caption='Input Card for detection')
+    st.image(image, caption='Selected Card for detection')
 
 
   
   if(Data_Set == "JLove"):
     image = open("./Test_Images/JLove.jpeg", "rb").read()
-    st.image(image, caption='Input Card for detection')
+    st.image(image, caption='Selected Card for detection',width=200)
 	
     if(Data_Set == "FourLove"):
       image = cv2.imread(r'./Test_Images/4Love.jpeg')

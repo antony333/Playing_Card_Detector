@@ -411,15 +411,15 @@ if (len(image)!=0):
     st.text("Obtained a 200x300 flattened image")
     st.image(warp)
     
-   st.subheader('Segmented Rank and Suit Image of Input image')
-   col1, col2 = st.columns(2)
-   with col1:
-     st.pyplot(rank_img)
-   with col2:
-     st.pyplot(suit_img)
+    st.subheader('Segmented Rank and Suit Image of Input image')
+    col1, col2 = st.columns(2)
+    with col1:
+      st.pyplot(rank_img)
+    with col2:
+      st.pyplot(suit_img)
     
-   st.write("##")
-   st.write("##")
+    st.write("##")
+    st.write("##")
     
     
     

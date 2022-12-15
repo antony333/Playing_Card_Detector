@@ -6,6 +6,15 @@ import numpy as np
 #import Cards
 
 
+from io import StringIO 
+
+
+
+#adding a file uploader
+
+kk = st.file_uploader("Please choose a file",['jpeg','png','jpg'],True)
+
+
 
 #Code for streamlit
 st.markdown("<h1 style='text-align: center; font-size: 40px;'>Playing Card Detector</h1>",unsafe_allow_html=True)

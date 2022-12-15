@@ -18,28 +18,28 @@ st.write('Selected Data is:', Data_Set)
 
 if(Data_Set == "4Love"):
   image = open("4Love.jpeg", "rb").read()
-  st.image(FourLove, caption='Input Card for detection')
+  st.image(image, caption='Input Card for detection')
   
   
 if(Data_Set == "3Clubs"):
   image = open("3Clubs.jpeg", "rb").read()
-  st.image(ThreeClubs, caption='Input Card for detection')
+  st.image(image, caption='Input Card for detection')
   
   
 if(Data_Set == "6Diamond"):
   image = open("6Diamond.jpeg", "rb").read()
-  st.image(SixDiamond, caption='Input Card for detection')
+  st.image(image, caption='Input Card for detection')
   
   
 if(Data_Set == "2Diamond"):
   image = open("2Diamond.jpeg", "rb").read()
-  st.image(TwoDiamond, caption='Input Card for detection')
+  st.image(image, caption='Input Card for detection')
   
   
   
 if(Data_Set == "JLove"):
   image = open("JLove.jpeg", "rb").read()
-  st.image(JLove, caption='Input Card for detection')
+  st.image(image, caption='Input Card for detection')
   
   
 

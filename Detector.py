@@ -28,7 +28,7 @@ st.markdown("<h1 style='text-align: center; font-size: 20px;'>Team Members : Ant
 
 
 input_image = st.radio("Choose if you want to work on already given dataset or use your own image",('Given Iamge', 'Your Image'))
-
+image = []
 
 if input_image == 'Given Iamge':
   Data_Set = st.selectbox('Select Data Set:',('FourLove','ThreeClubs','SixDiamond','TwoDiamond','JLove'))

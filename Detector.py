@@ -16,22 +16,22 @@ st.markdown("<h1 style='text-align: center; font-size: 20px;'>Team Members : Ant
 Data_Set = st.selectbox('Select Data Set:',('FourLove','ThreeClubs','SixDiamond','TwoDiamond','JLove'))
 st.write('Selected Data is:', Data_Set)
 
-if(Data_Set == "4Love"):
+if(Data_Set == "FourLove"):
   image = open("/Test_Images/4Love.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   
-if(Data_Set == "3Clubs"):
+if(Data_Set == "ThreeClubs"):
   image = open("/Test_Images/3Clubs.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   
-if(Data_Set == "6Diamond"):
+if(Data_Set == "sixDiamond"):
   image = open("/Test_Images/6Diamond.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   
-if(Data_Set == "2Diamond"):
+if(Data_Set == "TwoDiamond"):
   image = open("/Test_Images/2Diamond.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   

@@ -9,39 +9,6 @@ import numpy as np
 
 
 
-#Code for streamlit
-st.markdown("<h1 style='text-align: center; font-size: 40px;'>Playing Card Detector</h1>",unsafe_allow_html=True)
-st.markdown("<h1 style='text-align: center; font-size: 20px;'>Team Members : Antony Jerald & Joel Joy</h1>", unsafe_allow_html=True)
-
-Data_Set = st.selectbox('Select Data Set:',('FourLove','ThreeClubs','SixDiamond','TwoDiamond','JLove'))
-st.write('Selected Data is:', Data_Set)
-
-if(Data_Set == "FourLove"):
-  image = open("./Test_Images/4Love.jpeg", "rb").read()
-  st.image(image, caption='Input Card for detection')
-  
-  
-if(Data_Set == "ThreeClubs"):
-  image = open("./Test_Images/3Clubs.jpeg", "rb").read()
-  st.image(image, caption='Input Card for detection')
-  
-  
-if(Data_Set == "SixDiamond"):
-  image = open("./Test_Images/6Diamonds.jpeg", "rb").read()
-  st.image(image, caption='Input Card for detection')
-  
-  
-if(Data_Set == "TwoDiamond"):
-  image = open("./Test_Images/2Diamonds.jpeg", "rb").read()
-  st.image(image, caption='Input Card for detection')
-  
-  
-  
-if(Data_Set == "JLove"):
-  image = open("./Test_Images/JLove.jpeg", "rb").read()
-  st.image(image, caption='Input Card for detection')
-  
-  
 
 
 
@@ -425,7 +392,66 @@ else:
             #print(rank_match_name, suit_match_name, rank_match_diff, suit_match_diff)
             #print(rank_match_name, suit_match_name)
         
- 
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+#Code for streamlit
+st.markdown("<h1 style='text-align: center; font-size: 40px;'>Playing Card Detector</h1>",unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; font-size: 20px;'>Team Members : Antony Jerald & Joel Joy</h1>", unsafe_allow_html=True)
+
+Data_Set = st.selectbox('Select Data Set:',('FourLove','ThreeClubs','SixDiamond','TwoDiamond','JLove'))
+st.write('Selected Data is:', Data_Set)
+
+if(Data_Set == "FourLove"):
+  image = open("./Test_Images/4Love.jpeg", "rb").read()
+  st.image(image, caption='Input Card for detection')
+  
+  
+if(Data_Set == "ThreeClubs"):
+  image = open("./Test_Images/3Clubs.jpeg", "rb").read()
+  st.image(image, caption='Input Card for detection')
+  
+  
+if(Data_Set == "SixDiamond"):
+  image = open("./Test_Images/6Diamonds.jpeg", "rb").read()
+  st.image(image, caption='Input Card for detection')
+  
+  
+if(Data_Set == "TwoDiamond"):
+  image = open("./Test_Images/2Diamonds.jpeg", "rb").read()
+  st.image(image, caption='Input Card for detection')
+  
+  
+  
+if(Data_Set == "JLove"):
+  image = open("./Test_Images/JLove.jpeg", "rb").read()
+  st.image(image, caption='Input Card for detection')
+  
+  
+st.subheader('Image After Preprocessing')
+st.text("Operations : Greyscale Convertion , Gaussian Blurring & Thresholding")
+st.image(thresh_image)
+
+
+
+
+
+
+
+
+
+
+
+
 st.write("##")
 st.subheader('Output Data')
 st.write('Matched Rank Name',rank_match_name)   

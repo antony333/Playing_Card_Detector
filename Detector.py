@@ -11,8 +11,6 @@ import numpy as np
 st.markdown("<h1 style='text-align: center; font-size: 40px;'>Playing Card Detector</h1>",unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; font-size: 20px;'>Team Members : Antony Jerald & Joel Joy</h1>", unsafe_allow_html=True)
 
-Data_Set = st.selectbox('Select Data Set:',('FourLove','ThreeClubs','SixDiamond','TwoDiamond','JLove'))
-st.write('Selected Data is:', Data_Set)
 
 if(Data_Set == "FourLove"):
   image = open("./Test_Images/4Love.jpeg", "rb").read()

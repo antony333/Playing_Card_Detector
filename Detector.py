@@ -13,33 +13,35 @@ import numpy as np
 st.markdown("<h1 style='text-align: center; font-size: 40px;'>Playing Card Detector</h1>",unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; font-size: 20px;'>Team Members : Antony Jerald & Joel Joy</h1>", unsafe_allow_html=True)
 
-Data_Set = st.selectbox('Select Data Set:',('4Love','3Clubs','6Diamond','2Diamond','JLove'))
+Data_Set = st.selectbox('Select Data Set:',('FourLove','ThreeClubs','SixDiamond','TwoDiamond','JLove'))
 st.write('Selected Data is:', Data_Set)
 
 if(Data_Set == "4Love"):
+  lego_sample_image = open("sample_lego_input.jpeg", "rb").read()
+    st.image(lego_sample_image, caption='Sample image used for training')
   image = open("4Love.jpeg", "rb").read()
-  st.image(4Love, caption='Input Card for detection')
+  st.image(FourLove, caption='Input Card for detection')
   
   
   if(Data_Set == "3Clubs"):
-  image = open("4Love.jpeg", "rb").read()
-  st.image(4Love, caption='Input Card for detection')
+  image = open("3Clubs.jpeg", "rb").read()
+  st.image(ThreeClubs, caption='Input Card for detection')
   
   
   if(Data_Set == "6Diamond"):
-  image = open("4Love.jpeg", "rb").read()
-  st.image(4Love, caption='Input Card for detection')
+  image = open("6Diamond.jpeg", "rb").read()
+  st.image(SixDiamond, caption='Input Card for detection')
   
   
   if(Data_Set == "2Diamond"):
-  image = open("4Love.jpeg", "rb").read()
-  st.image(4Love, caption='Input Card for detection')
+  image = open("2Diamond.jpeg", "rb").read()
+  st.image(TwoDiamond, caption='Input Card for detection')
   
   
   
   if(Data_Set == "JLove"):
-  image = open("4Love.jpeg", "rb").read()
-  st.image(4Love, caption='Input Card for detection')
+  image = open("JLove.jpeg", "rb").read()
+  st.image(JLove, caption='Input Card for detection')
   
   
 
@@ -413,8 +415,8 @@ else:
  
 st.write("##")
 st.subheader('Output Data')
-st.text(rank_match_name)   
-st.text(suit_match_name) 
+st.write('Matched Rank Name',rank_match_name)   
+st.write('Matched Suit Name',suit_match_name) 
                 
                 
                 

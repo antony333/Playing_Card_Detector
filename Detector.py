@@ -51,7 +51,7 @@ if(Data_Set == "JLove"):
 Min_Card_Area = 25000
 Max_Card_Area = 300000
 # Adaptive threshold levels
-const_for_thresh = 60
+const_for_thresh = 100
 # Height and width of rectangle which contains card suit aand rank
 Corner_H = 84
 Corner_W = 32
@@ -430,6 +430,11 @@ else:
 st.subheader('Image After Preprocessing')
 st.text("Operations : Greyscale Convertion , Gaussian Blurring & Thresholding")
 st.image(thresh_image)
+
+
+st.subheader('After Perspective Transform')
+st.text("Obtained a 200x300 flattened image")
+st.image(warp)
 
 
 

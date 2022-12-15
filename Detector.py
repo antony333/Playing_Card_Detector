@@ -22,23 +22,23 @@ if(Data_Set == "FourLove"):
   
   
 if(Data_Set == "ThreeClubs"):
-  image = open("/Test_Images/3Clubs.jpeg", "rb").read()
+  image = open("./Test_Images/3Clubs.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   
 if(Data_Set == "sixDiamond"):
-  image = open("/Test_Images/6Diamond.jpeg", "rb").read()
+  image = open("./Test_Images/6Diamond.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   
 if(Data_Set == "TwoDiamond"):
-  image = open("/Test_Images/2Diamond.jpeg", "rb").read()
+  image = open("./Test_Images/2Diamond.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   
   
 if(Data_Set == "JLove"):
-  image = open("/Test_Images/JLove.jpeg", "rb").read()
+  image = open("./Test_Images/JLove.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   

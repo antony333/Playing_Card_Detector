@@ -427,9 +427,9 @@ else:
 
   
   
-#st.subheader('Image After Preprocessing')
-#st.text("Operations : Greyscale Convertion , Gaussian Blurring & Thresholding")
-#st.image(thresh_image)
+st.subheader('Image After Preprocessing')
+st.text("Operations : Greyscale Convertion , Gaussian Blurring & Thresholding")
+st.image(thresh_image)
 
 
 

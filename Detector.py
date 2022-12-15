@@ -61,6 +61,7 @@ if input_image == 'Given Iamge':
 
 else:
   image = st.file_uploader("Please choose a file",['jpeg','png','jpg'],True)
+  st.image(load_image(image),width=250)
 
 
 #%%  Some initialisation

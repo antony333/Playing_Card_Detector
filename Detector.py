@@ -1,24 +1,7 @@
 import streamlit as st
-#import matplotlib.pyplot as plt
-#import os
 import cv2
 import numpy as np
-#import Cards
 from PIL import Image
-
-
-#from io import StringIO 
-
-
-
-#adding a file uploader
-
-
-
-
-  
-  
-
 
 
 
@@ -27,40 +10,37 @@ st.markdown("<h1 style='text-align: center; font-size: 40px;'>Playing Card Detec
 st.markdown("<h1 style='text-align: center; font-size: 20px;'>Team Members : Antony Jerald & Joel Joy</h1>", unsafe_allow_html=True)
 
 
+#To coose Image
 input_image = st.radio("Choose if you want to work on already given dataset or use your own image",('Given Iamge', 'Your Image'))
 image = []
 
+
 if input_image == 'Given Iamge':
-  Data_Set = st.selectbox('Select Data Set:',('FourLove','ThreeClubs','SixDiamond','TwoDiamond','JLove'))
+  Data_Set = st.selectbox('Select Data Set:',('FourHearts','ThreeClubs','SixDiamonds','TwoDiamonds','JHearts'))
   st.write('Selected Data is:', Data_Set)
 
-  if(Data_Set == "FourLove"):
-    image = open("./Test_Images/4Love.jpeg", "rb").read()
+  if(Data_Set == "FourHearts"):
+    image = open("./Test_Images/4Hearts.jpeg", "rb").read()
     st.image(image, caption='Selected Card for detection')
-
 
   if(Data_Set == "ThreeClubs"):
     image = open("./Test_Images/3Clubs.jpeg", "rb").read()
     st.image(image, caption='Selected Card for detection')
 
-
-  if(Data_Set == "SixDiamond"):
+  if(Data_Set == "SixDiamonds"):
     image = open("./Test_Images/6Diamonds.jpeg", "rb").read()
     st.image(image, caption='Selected Card for detection')
 
-
-  if(Data_Set == "TwoDiamond"):
+  if(Data_Set == "TwoDiamonds"):
     image = open("./Test_Images/2Diamonds.jpeg", "rb").read()
     st.image(image, caption='Selected Card for detection')
-
-
   
-  if(Data_Set == "JLove"):
+  if(Data_Set == "JHearts"):
     image = open("./Test_Images/JLove.jpeg", "rb").read()
     st.image(image, caption='Selected Card for detection')
 	
   if(Data_Set == "FourLove"):
-      image = cv2.imread(r'./Test_Images/4Love.jpeg')
+      image = cv2.imread(r'./Test_Images/4Hearts.jpeg')
   elif(Data_Set == "ThreeClubs"):
       image = cv2.imread(r'./Test_Images/3Clubs.jpeg')
   elif(Data_Set == "TwoDiamond"):
@@ -68,16 +48,13 @@ if input_image == 'Given Iamge':
   elif(Data_Set == "SixDiamond"):
       image = cv2.imread(r'./Test_Images/6Diamonds.jpeg')
   elif(Data_Set == "JLove"):
-      image = cv2.imread(r'./Test_Images/JLove.jpeg')
+      image = cv2.imread(r'./Test_Images/JHearts.jpeg')
 
 
-else:
- # def load_image(image_file):
-	#img = Image.open(image_file)
-	#return img
-	
-  st.write("Upload the Image of Person to Register them in DataBase")
-  uploaded_file = st.file_uploader("Upload image", type=['jpeg', 'png', 'jpg', 'webp'])
+
+#To give our own input image
+else:	
+  uploaded_file = st.file_uploader("Upload Card Iamge (For better result use images in dark background)", type=['jpeg', 'png', 'jpg'])
 
   if uploaded_file is not None:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
@@ -86,24 +63,10 @@ else:
 
 
 
-	
-	
-#	import cv2
-#import numpy as np
 
-#st.write("Upload the Image of Person to Register them in DataBase")
+#Main Code Starts
 
-#uploaded_file = st.file_uploader("Upload image", type=['jpeg', 'png', 'jpg', 'webp'])
-
-
-#    st.image(image, channels="BGR")
-	
-	
-	
-	
 #%%  Some initialisation
-
-
 #Maximum and Minimum Card Areas
 if (len(image)!=0):
     Min_Card_Area = 25000
@@ -122,28 +85,7 @@ if (len(image)!=0):
     # Maximum difference in rank allowed
     Max_Suit_Diff = 1100
     Max_Rank_Diff = 3500
-    
-    
-    
-    #%% #InputImage
-    
-    
-    
-    
-    
-    
-    
-    
-    #image = cv2.imread(r'4Love.jpeg')
-    #image = 4Love
-    
-    
-    #%% To load rank and suit images for compairing
-    
-    
-    #path = os.path.dirname(os.path.abspath(__file__))
-    
-    
+
     
     class Train_ranks:
         def __init__(self):
@@ -155,8 +97,6 @@ if (len(image)!=0):
         def __init__(self):
             self.img = []
             self.name = "Dummy"
-    
-    
     
     def load_ranks(filepath):    
         train_ranks = []
@@ -234,9 +174,7 @@ if (len(image)!=0):
         contour_sorted.append(contours[i])
         hierarchy_sorted.append(hierarchy[0][i])   
     
-    
-    
-    
+
     
     #%% Card Iamge Processing
     
@@ -463,18 +401,6 @@ if (len(image)!=0):
             
     
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-    
-    
-      
       
     st.subheader('Image After Preprocessing')
     st.text("Operations : Greyscale Convertion , Gaussian Blurring & Thresholding")
@@ -485,6 +411,15 @@ if (len(image)!=0):
     st.text("Obtained a 200x300 flattened image")
     st.image(warp)
     
+   st.subheader('Segmented Rank and Suit Image of Input image')
+   col1, col2 = st.columns(2)
+   with col1:
+     st.pyplot(rank_img)
+   with col2:
+     st.pyplot(suit_img)
+    
+   st.write("##")
+   st.write("##")
     
     
     
@@ -498,8 +433,7 @@ if (len(image)!=0):
     
     st.write("##")
     st.subheader('Output Data')
-    st.write('Matched Rank Name',rank_match_name)   
-    st.write('Matched Suit Name',suit_match_name) 
+    st.write('Given image is', rank_match_name , 'of ' ,suit_match_name )   
                     
                     
                     

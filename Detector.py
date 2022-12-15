@@ -404,7 +404,7 @@ if (len(image)!=0):
       
     st.subheader('Image After Preprocessing')
     st.text("Operations : Greyscale Convertion , Gaussian Blurring & Thresholding")
-    st.image(thresh_image)
+    st.image(thresh_image,width = 300)
     
     
     st.subheader('After Perspective Transform')

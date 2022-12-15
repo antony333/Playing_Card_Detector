@@ -1,6 +1,6 @@
 import streamlit as st
-import matplotlib.pyplot as plt
-import os
+#import matplotlib.pyplot as plt
+#import os
 import cv2
 import numpy as np
 #import Cards

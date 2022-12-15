@@ -21,23 +21,23 @@ if input_image == 'Given Iamge':
 
   if(Data_Set == "FourHearts"):
     image = open("./Test_Images/4Hearts.jpeg", "rb").read()
-    st.image(image, caption='Selected Card for detection',width = 400)
+    st.image(image, caption='Selected Card for detection',width = 300)
 
   if(Data_Set == "ThreeClubs"):
     image = open("./Test_Images/3Clubs.jpeg", "rb").read()
-    st.image(image, caption='Selected Card for detection',width = 400)
+    st.image(image, caption='Selected Card for detection',width = 300)
 
   if(Data_Set == "SixDiamonds"):
     image = open("./Test_Images/6Diamonds.jpeg", "rb").read()
-    st.image(image, caption='Selected Card for detection',width = 400)
+    st.image(image, caption='Selected Card for detection',width = 300)
 
   if(Data_Set == "TwoDiamonds"):
     image = open("./Test_Images/2Diamonds.jpeg", "rb").read()
-    st.image(image, caption='Selected Card for detection',width = 400)
+    st.image(image, caption='Selected Card for detection',width = 300)
   
   if(Data_Set == "JHearts"):
     image = open("./Test_Images/JHearts.jpeg", "rb").read()
-    st.image(image, caption='Selected Card for detection',width = 400)
+    st.image(image, caption='Selected Card for detection',width = 300)
 	
   if(Data_Set == "FourHearts"):
       image = cv2.imread(r'./Test_Images/4Hearts.jpeg')
@@ -404,12 +404,12 @@ if (len(image)!=0):
       
     st.subheader('Image After Preprocessing')
     st.text("Operations : Greyscale Convertion , Gaussian Blurring & Thresholding")
-    st.image(thresh_image,width = 400)
+    st.image(thresh_image)
     
     
     st.subheader('After Perspective Transform')
     st.text("Obtained a 200x300 flattened image")
-    st.image(warp,width = 400)
+    st.image(warp)
     
     st.subheader('Segmented Rank and Suit Image of Input image')
     col1, col2 = st.columns(2)

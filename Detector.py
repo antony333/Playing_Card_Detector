@@ -26,7 +26,7 @@ if(Data_Set == "ThreeClubs"):
   st.image(image, caption='Input Card for detection')
   
   
-if(Data_Set == "sixDiamond"):
+if(Data_Set == "SixDiamond"):
   image = open("./Test_Images/6Diamond.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   

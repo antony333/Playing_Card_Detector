@@ -58,6 +58,17 @@ if input_image == 'Given Iamge':
   if(Data_Set == "JLove"):
     image = open("./Test_Images/JLove.jpeg", "rb").read()
     st.image(image, caption='Input Card for detection')
+	
+    if(Data_Set == "FourLove"):
+      image = cv2.imread(r'./Test_Images/4Love.jpeg')
+    elif(Data_Set == "ThreeClubs"):
+      image = cv2.imread(r'./Test_Images/3Clubs.jpeg')
+    elif(Data_Set == "TwoDiamond"):
+      image = cv2.imread(r'./Test_Images/2Diamonds.jpeg')
+    elif(Data_Set == "SixDiamond"):
+      image = cv2.imread(r'./Test_Images/6Diamonds.jpeg')
+    elif(Data_Set == "JLove"):
+      image = cv2.imread(r'./Test_Images/JLove.jpeg')
 
 
 else:
@@ -72,11 +83,7 @@ else:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     image = cv2.imdecode(file_bytes, 1)
     st.image(image, channels="BGR")
-  #uploaded_file = st.file_uploader("Please choose a file",['jpeg','png','jpg'],True)
-  #if uploaded_file is not None:
-    #file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
-    #image = cv2.imdecode(file_bytes, 1)
-    #st.image(image)
+
 
 
 	
@@ -122,16 +129,7 @@ Max_Rank_Diff = 3500
 
 
 
-if(Data_Set == "FourLove"):
-  image = cv2.imread(r'./Test_Images/4Love.jpeg')
-elif(Data_Set == "ThreeClubs"):
-  image = cv2.imread(r'./Test_Images/3Clubs.jpeg')
-elif(Data_Set == "TwoDiamond"):
-  image = cv2.imread(r'./Test_Images/2Diamonds.jpeg')
-elif(Data_Set == "SixDiamond"):
-  image = cv2.imread(r'./Test_Images/6Diamonds.jpeg')
-elif(Data_Set == "JLove"):
-  image = cv2.imread(r'./Test_Images/JLove.jpeg')
+
 
 
 

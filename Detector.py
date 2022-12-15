@@ -39,15 +39,15 @@ if input_image == 'Given Iamge':
     image = open("./Test_Images/JHearts.jpeg", "rb").read()
     st.image(image, caption='Selected Card for detection')
 	
-  if(Data_Set == "FourLove"):
+  if(Data_Set == "FourHearts"):
       image = cv2.imread(r'./Test_Images/4Hearts.jpeg')
   elif(Data_Set == "ThreeClubs"):
       image = cv2.imread(r'./Test_Images/3Clubs.jpeg')
-  elif(Data_Set == "TwoDiamond"):
+  elif(Data_Set == "TwoDiamonds"):
       image = cv2.imread(r'./Test_Images/2Diamonds.jpeg')
-  elif(Data_Set == "SixDiamond"):
+  elif(Data_Set == "SixDiamonds"):
       image = cv2.imread(r'./Test_Images/6Diamonds.jpeg')
-  elif(Data_Set == "JLove"):
+  elif(Data_Set == "JHearts"):
       image = cv2.imread(r'./Test_Images/JHearts.jpeg')
 
 

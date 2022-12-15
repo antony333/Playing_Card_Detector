@@ -83,7 +83,7 @@ Max_Rank_Diff = 3500
 #%% #InputImage
 
 
-#image = cv2.imread(r'D:\Sem 7\Image Processing\Project\OpenCV-Playing-Card-Detector\JSpades.jpeg')
+image = cv2.imread(r'4Love.jpeg')
 #image = 4Love
 
 

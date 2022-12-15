@@ -67,7 +67,7 @@ if input_image == 'Given Iamge':
       image = cv2.imread(r'./Test_Images/2Diamonds.jpeg')
   elif(Data_Set == "SixDiamond"):
       image = cv2.imread(r'./Test_Images/6Diamonds.jpeg')
-   elif(Data_Set == "JLove"):
+  elif(Data_Set == "JLove"):
       image = cv2.imread(r'./Test_Images/JLove.jpeg')
 
 

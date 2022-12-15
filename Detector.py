@@ -36,7 +36,7 @@ if input_image == 'Given Iamge':
 
   if(Data_Set == "FourLove"):
     image = open("./Test_Images/4Love.jpeg", "rb").read()
-    st.image(image, caption='Selected Card for detection',width=200)
+    st.image(image, caption='Selected Card for detection',width=350)
 
 
   if(Data_Set == "ThreeClubs"):

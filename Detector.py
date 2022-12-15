@@ -11,11 +11,11 @@ st.markdown("<h1 style='text-align: center; font-size: 20px;'>Team Members : Ant
 
 
 #To coose Image
-input_image = st.radio("Choose if you want to work on already given dataset or use your own image",('Given Image', 'Your Image'))
+input_image = st.radio("Choose if you want to work on already given dataset or use your own image",('Test Image', 'Your Image'))
 image = []
 
 
-if input_image == 'Given Image':
+if input_image == 'Test Image':
   Data_Set = st.selectbox('Select Data Set:',('FourHearts','ThreeClubs','SixDiamonds','TwoDiamonds','JHearts'))
   st.write('Selected Data is:', Data_Set)
 

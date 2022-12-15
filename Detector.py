@@ -17,8 +17,6 @@ Data_Set = st.selectbox('Select Data Set:',('FourLove','ThreeClubs','SixDiamond'
 st.write('Selected Data is:', Data_Set)
 
 if(Data_Set == "4Love"):
-  lego_sample_image = open("sample_lego_input.jpeg", "rb").read()
-    st.image(lego_sample_image, caption='Sample image used for training')
   image = open("4Love.jpeg", "rb").read()
   st.image(FourLove, caption='Input Card for detection')
   

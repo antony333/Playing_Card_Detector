@@ -7,8 +7,6 @@ import numpy as np
 
 
 
-
-
 #Code for streamlit
 st.markdown("<h1 style='text-align: center; font-size: 40px;'>Playing Card Detector</h1>",unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; font-size: 20px;'>Team Members : Antony Jerald & Joel Joy</h1>", unsafe_allow_html=True)
@@ -40,14 +38,6 @@ if(Data_Set == "TwoDiamond"):
 if(Data_Set == "JLove"):
   image = open("./Test_Images/JLove.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
-
-
-
-
-
-
-
-
 
 
 
@@ -437,9 +427,9 @@ else:
 
   
   
-st.subheader('Image After Preprocessing')
-st.text("Operations : Greyscale Convertion , Gaussian Blurring & Thresholding")
-st.image(thresh_image)
+#st.subheader('Image After Preprocessing')
+#st.text("Operations : Greyscale Convertion , Gaussian Blurring & Thresholding")
+#st.image(thresh_image)
 
 
 

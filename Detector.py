@@ -27,12 +27,12 @@ if(Data_Set == "ThreeClubs"):
   
   
 if(Data_Set == "SixDiamond"):
-  image = open("./Test_Images/6Diamond.jpeg", "rb").read()
+  image = open("./Test_Images/6Diamonds.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   
 if(Data_Set == "TwoDiamond"):
-  image = open("./Test_Images/2Diamond.jpeg", "rb").read()
+  image = open("./Test_Images/2Diamonds.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   

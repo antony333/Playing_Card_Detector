@@ -61,8 +61,11 @@ if input_image == 'Given Iamge':
 
 
 else:
+ # def load_image(image_file):
+	#img = Image.open(image_file)
+	#return img
   image = st.file_uploader("Please choose a file",['jpeg','png','jpg'],True)
-  st.image(load_image(image),width=250)
+  st.image(Image.open(image),width=250)
 
 
 #%%  Some initialisation

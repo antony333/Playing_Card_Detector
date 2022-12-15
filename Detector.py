@@ -17,28 +17,28 @@ Data_Set = st.selectbox('Select Data Set:',('FourLove','ThreeClubs','SixDiamond'
 st.write('Selected Data is:', Data_Set)
 
 if(Data_Set == "4Love"):
-  image = open("4Love.jpeg", "rb").read()
+  image = open("/Test_Images/4Love.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   
 if(Data_Set == "3Clubs"):
-  image = open("3Clubs.jpeg", "rb").read()
+  image = open("/Test_Images/3Clubs.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   
 if(Data_Set == "6Diamond"):
-  image = open("6Diamond.jpeg", "rb").read()
+  image = open("/Test_Images/6Diamond.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   
 if(Data_Set == "2Diamond"):
-  image = open("2Diamond.jpeg", "rb").read()
+  image = open("/Test_Images/2Diamond.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   
   
 if(Data_Set == "JLove"):
-  image = open("JLove.jpeg", "rb").read()
+  image = open("/Test_Images/JLove.jpeg", "rb").read()
   st.image(image, caption='Input Card for detection')
   
   

@@ -11,11 +11,11 @@ st.markdown("<h1 style='text-align: center; font-size: 20px;'>Team Members : Ant
 
 
 #To coose Image
-input_image = st.radio("Choose if you want to work on already given dataset or use your own image",('Given Iamge', 'Your Image'))
+input_image = st.radio("Choose if you want to work on already given dataset or use your own image",('Given Image', 'Your Image'))
 image = []
 
 
-if input_image == 'Given Iamge':
+if input_image == 'Given Image':
   Data_Set = st.selectbox('Select Data Set:',('FourHearts','ThreeClubs','SixDiamonds','TwoDiamonds','JHearts'))
   st.write('Selected Data is:', Data_Set)
 
@@ -54,12 +54,12 @@ if input_image == 'Given Iamge':
 
 #To give our own input image
 else:	
-  uploaded_file = st.file_uploader("Upload Card Iamge (For better result use images in dark background)", type=['jpeg', 'png', 'jpg'])
+  uploaded_file = st.file_uploader("Upload Card Image (For better result use images in dark background)", type=['jpeg', 'png', 'jpg'])
 
   if uploaded_file is not None:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     image = cv2.imdecode(file_bytes, 1)
-    st.image(image, channels="BGR")
+    st.image(image, channels="BGR",width = 300)
 
 
 

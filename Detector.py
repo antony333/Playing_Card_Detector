@@ -83,6 +83,21 @@ Max_Rank_Diff = 3500
 #%% #InputImage
 
 
+
+
+if(Data_Set == "FourLove"):
+  image = cv2.imread(r'./Test_Images/4Love.jpeg')
+elif(Data_Set == "ThreeClubs"):
+  image = cv2.imread(r'./Test_Images/3Clubs.jpeg')
+elif(Data_Set == "TwoDiamond"):
+  image = cv2.imread(r'./Test_Images/2Diamond.jpeg')
+elif(Data_Set == "SixDiamond"):
+  image = cv2.imread(r'./Test_Images/6Diamond.jpeg')
+elif(Data_Set == "JLove"):
+  image = cv2.imread(r'./Test_Images/JLove.jpeg')
+
+
+
 #image = cv2.imread(r'4Love.jpeg')
 #image = 4Love
 

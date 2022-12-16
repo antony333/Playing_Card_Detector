@@ -16,27 +16,32 @@ image = []
 
 
 if input_image == 'Test Image':
-  Data_Set = st.selectbox('Select Data Set:',('FourHearts','ThreeClubs','SixDiamonds','TwoDiamonds','JHearts'))
-  st.write('Selected Data is:', Data_Set)
+  Data_Set = st.selectbox('Select any test image:',('FourHearts','ThreeClubs','SixDiamonds','TwoDiamonds','JHearts'))
+  st.write('Selected Test Image is :', Data_Set)
 
   if(Data_Set == "FourHearts"):
     image = open("./Test_Images/4Hearts.jpeg", "rb").read()
+    st.subheader('Input Image')
     st.image(image, caption='Selected Card for detection',width = 300)
 
   if(Data_Set == "ThreeClubs"):
     image = open("./Test_Images/3Clubs.jpeg", "rb").read()
+    st.subheader('Input Image')
     st.image(image, caption='Selected Card for detection',width = 300)
 
   if(Data_Set == "SixDiamonds"):
     image = open("./Test_Images/6Diamonds.jpeg", "rb").read()
+    st.subheader('Input Image')
     st.image(image, caption='Selected Card for detection',width = 300)
 
   if(Data_Set == "TwoDiamonds"):
     image = open("./Test_Images/2Diamonds.jpeg", "rb").read()
+    st.subheader('Input Image')
     st.image(image, caption='Selected Card for detection',width = 300)
   
   if(Data_Set == "JHearts"):
     image = open("./Test_Images/JHearts.jpeg", "rb").read()
+    st.subheader('Input Image')
     st.image(image, caption='Selected Card for detection',width = 300)
 	
   if(Data_Set == "FourHearts"):
@@ -59,6 +64,7 @@ else:
   if uploaded_file is not None:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     image = cv2.imdecode(file_bytes, 1)
+    st.subheader('Input Image')
     st.image(image, channels="BGR",width = 300)
 
 

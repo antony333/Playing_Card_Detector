@@ -3,9 +3,15 @@ The objective of this project is to implement a playing card detector that lever
 
 
 ## Language and libraries used
-**Python  
-OpenCV
-Numpy** 
+**Python**  
+**OpenCV** 
+**Numpy**
+**Streamlit** 
+
+
+## Web App
+https://antony333-playing-card-detector-detector-ogv2po.streamlit.app/
+
 
 ## Project Report
 Download the project report from the below link 
